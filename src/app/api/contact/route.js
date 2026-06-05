@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   try {
     const { data } = await request.json();
-
+ 
     console.log("📩 Data diterima di API Next.js:", data);
 
     const res = await fetch(
