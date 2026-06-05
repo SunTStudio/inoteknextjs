@@ -38,9 +38,9 @@ function NavbarHeader() {
   }, [isOpen]);
 
   const menus = [
-    { label: "BERANDA", path: "/nichiha" },
+    // { label: "BERANDA", path: "/nichiha" },
     {
-      label: "PROFIL PERUSAHAAN",
+      label: "PROFIL",
       path: "/companyprofile",
       children: [
         {
@@ -64,8 +64,18 @@ function NavbarHeader() {
         },
       ],
     },
-    { label: "ARTIKEL", path: "/news" },
+    // { label: "ARTIKEL", path: "/news" },
     { label: "DISTRIBUTOR", path: "/distributor" },
+    { label: "GALERI FOTO", path: "/galeri" },
+    {
+      label: "PEMASANGAN",
+      path: "/pemasangan",
+      children: [
+        { label: "Petunjuk Instalasi", path: "/pemasangan?instalasi=petunjuk" },
+        { label: "Video Instalasi", path: "/pemasangan?instalasi=video" },
+      ],
+    },
+    // { label: "PEMASANGAN V2", path: "/pemasanganv2" },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);

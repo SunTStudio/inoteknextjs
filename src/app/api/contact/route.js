@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   try {
     const { data } = await request.json();
- 
+
     console.log("📩 Data diterima di API Next.js:", data);
 
     const res = await fetch(
@@ -30,7 +30,7 @@ export async function POST(request) {
     console.log("✅ Strapi Response:", text);
     // Kirim email notifikasi ke admin
     await resend.emails.send({
-      from: "noreply@idmaks.id",
+      from: "noreply@inotekkaryamandiri.com",
       to: process.env.ADMIN_NOTIFICATION_EMAIL,
       subject: "📩 Pesan Pertanyaan Baru dari User",
       html: `

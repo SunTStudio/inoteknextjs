@@ -50,7 +50,7 @@ export async function POST(request) {
 
     // Kirim email notifikasi ke admin
     await resend.emails.send({
-      from: "noreply@idmaks.id",
+      from: "noreply@inotekkaryamandiri.com",
       to: process.env.ADMIN_NOTIFICATION_EMAIL,
       subject: '📩 New Newsletter Subscription',
       html: `
