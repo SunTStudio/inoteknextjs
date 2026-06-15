@@ -7,6 +7,9 @@ const getImageUrl = (image, baseUrl) => {
 };
 
 export async function getNewsArticles() {
+  // Bypass SSL error sementara
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
   const baseUrl = process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, "");
 
   const res = await fetch(

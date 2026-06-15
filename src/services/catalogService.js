@@ -14,6 +14,9 @@ const getFileUrl = (file, baseUrl) => {
 };
 
 export async function getCatalogData() {
+  // Bypass SSL error sementara (JANGAN GUNAKAN DI PRODUCTION)
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
   const baseUrl = process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, "");
 
   try {
