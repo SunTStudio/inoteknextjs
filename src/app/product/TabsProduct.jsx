@@ -40,12 +40,31 @@ export default function Tabs({ initialData }) {
     }
   }, [seriesFromURL]);
 
+  // 📜 Auto-scroll ke bagian katalog jika hash ada di URL
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === "#daftar-produk") {
+      const element = document.getElementById("daftar-produk");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 150);
+      }
+    }
+  }, []);
+
   const filteredData = catalogData.filter(
     (item) => item.product === activeProduct && item.category === activeCategory
   );
 
   return (
     <div className="w-full font-display">
+      <div className="text-center my-6">
+        <h1 className="text-3xl font-bold text-[#013774]">Katalog Produk Nichiha</h1>
+        <p className="text-gray-600 mt-2">
+          Jelajahi berbagai varian produk berkualitas dari Nichiha.
+        </p>
+      </div>
+
       {/* Tab Produk */}
       <div className="flex border-b justify-evenly border-gray-200 relative">
         {productList.map((prod) => (

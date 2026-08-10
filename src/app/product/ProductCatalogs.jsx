@@ -46,7 +46,7 @@ export default async function ProductCatalogPage() {
     }));
 
     return (
-      <section className="lg:px-40 px-4 py-6 min-h-screen w-full">
+      <section id="daftar-produk" className="lg:px-40 px-4 py-6 min-h-screen w-full bg-white text-gray-900">
         <Suspense fallback={<p className="text-center">Loading produk...</p>}>
           <Tabs initialData={types} />
         </Suspense>

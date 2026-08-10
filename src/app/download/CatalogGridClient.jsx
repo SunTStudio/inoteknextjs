@@ -48,22 +48,24 @@ export default function CatalogGridClient({ initialCatalogs = [] }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 p-6">
+      <div className="flex flex-wrap justify-start gap-6 py-6">
         {initialCatalogs.map((catalog) => (
           <button
             key={catalog.id}
             type="button"
             onClick={() => openModal(catalog)}
-            className="text-left shadow-[4px_4px_2px_0_rgba(0,0,0,0.25)] hover:shadow-lg transition-shadow duration-300 rounded-lg"
+            className="text-left shadow-[4px_4px_2px_0_rgba(0,0,0,0.15)] hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden group bg-white border border-gray-200 flex flex-col w-full sm:w-[260px]"
           >
-            <div className="bg-white lg:h-[200px] 2xl:h-[400px] rounded-lg shadow-md overflow-hidden flex flex-col cursor-pointer">
+            <div className="w-full h-72 sm:h-80 md:h-[340px] bg-gray-50 flex items-center justify-center p-2 overflow-hidden">
               <img
                 src={catalog.coverImage}
                 alt={catalog.title}
-                className="lg:h-[85%] w-full object-cover"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 rounded-lg"
                 loading="lazy"
               />
-              <p className="text-center font-semibold text-2xl py-4 text-[#0253AE] my-auto">
+            </div>
+            <div className="p-4 border-t border-gray-100 flex items-center justify-center mt-auto w-full">
+              <p className="text-center font-bold text-base md:text-lg text-[#0253AE]">
                 {catalog.title}
               </p>
             </div>

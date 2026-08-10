@@ -21,7 +21,6 @@ export async function POST(request) {
       // Revalidate daftar berita dan homepage
       revalidatePath("/");
       revalidatePath("/news");
-      revalidatePath("/nichiha");
 
       // Revalidate detail berita
       const docId = entry?.documentId || entry?.id || entry?._id;

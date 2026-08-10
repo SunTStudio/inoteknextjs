@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { List, ListItem } from "flowbite-react";
 import { FaCircle } from "react-icons/fa";
@@ -12,12 +14,14 @@ function VisiMisiSection() {
     [4]: "Menjalin kemitraan jangka panjang dengan arsitek, developer, dan kontraktor",
     [5]: "Berkomitmen pada keberlanjutan dan nilai tambah bangunan",
   };
+
   return (
     <section
       id="visimisi"
-      className="content grid grid-cols-1 lg:grid-cols-2 gap-10 py-5 md:min-h-[70vh]"
+      className="content grid grid-cols-1 lg:grid-cols-2 gap-10 py-12"
     >
       <motion.div
+        className="h-full"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ amount: 0.3, once: true }}
@@ -25,31 +29,32 @@ function VisiMisiSection() {
       >
         <VisiMisiCard
           title="Visi"
-          textAlign="text-center lg:text-justify self-center"
+          textAlign="text-center"
         >
-          <p>
-            Menjadi perusahaan distribusi terdepan dalam penyediaan material
-            dinding eksterior inovatif dan berestetika di Indonesia
+          <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed max-w-md mx-auto py-6">
+            "Menjadi perusahaan distribusi terdepan dalam penyediaan material
+            dinding eksterior inovatif dan berestetika di Indonesia."
           </p>
         </VisiMisiCard>
       </motion.div>
 
       <motion.div
+        className="h-full"
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{ type: "spring", stiffness: 90, damping: 10 }}
       >
         <VisiMisiCard title="Misi">
-          <List className="list-disc list-inside space-y-2">
+          <List className="list-disc list-inside space-y-4">
             {Object.entries(misiList).map(([key, value]) => (
               <ListItem
                 key={key}
                 icon={FaCircle}
-                theme={{ icon: "me-2 h-2 w-2" }}
-                className="text-white flex gap-2"
+                theme={{ icon: "me-3 mt-2 h-2 w-2 text-[#0253AE]" }}
+                className="text-gray-600 flex items-start gap-1"
               >
-                <p>{value}</p>
+                <p className="text-base md:text-lg leading-relaxed">{value}</p>
               </ListItem>
             ))}
           </List>
@@ -58,4 +63,5 @@ function VisiMisiSection() {
     </section>
   );
 }
+
 export default VisiMisiSection;

@@ -20,7 +20,9 @@ export default function VideoInstalasi() {
     const fetchData = async () => {
       try {
         // Asumsi API mengambil dari collection "video-pemasangans"
-        const res = await fetch(`${baseUrl}/api/video-instalasis?populate=*`);
+        const res = await fetch(
+          `${baseUrl}/api/video-instalasis?filters[$or][0][kategori][$eq]=nichiha&filters[$or][1][kategori][$null]=true&populate=*`
+        );
         const result = await res.json();
         setData(result.data || []);
       } catch (error) {

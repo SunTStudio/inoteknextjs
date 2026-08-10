@@ -48,31 +48,42 @@ function NavbarHeader() {
           path: "/companyprofile#tentang-kami",
         },
         { label: "Visi & Misi", path: "/companyprofile#visimisi" },
-        { label: "Budaya", path: "/companyprofile#budaya" },
+        // { label: "Budaya", path: "/companyprofile#budaya" },
+        // jangkauan distribusi
+        { label: "Jangkauan Distribusi", path: "/companyprofile#jangkauan-distribusi" },
+        // artikel
+        { label: "Artikel", path: "/companyprofile#artikel" },
+
       ],
     },
     {
       label: "PRODUK",
       path: "/product",
       children: [
-        { label: "E-Catalog", path: "/download" },
-        { label: "Ex Series 1820", path: "/product?series=EX Series 1820" },
-        { label: "Ex Series 3030", path: "/product?series=EX Series 3030" },
-        {
-          label: "Ex Series 3030 New Introduction",
-          path: "/product?series=EX Series 3030 New Introduction",
-        },
+        { label: "Nichiha", path: "/nichiha" },
+        { label: "LUUM", path: "/luum" },
+        // { label: "E-Catalog", path: "/download" },
       ],
     },
     // { label: "ARTIKEL", path: "/news" },
-    { label: "DISTRIBUTOR", path: "/distributor" },
-    { label: "GALERI FOTO", path: "/galeri" },
+    // { label: "DISTRIBUTOR", path: "/distributor" },
+    {
+      label: "GALERI FOTO",
+      path: "/galeri",
+      children: [
+        { label: "Nichiha", path: "/galeri?category=nichiha" },
+        { label: "LUUM", path: "/galeri?category=luum" },
+        // { label: "Nichiha v2", path: "/galeriv2?category=nichiha" },
+        // { label: "LUUM v2", path: "/galeriv2?category=luum" },
+      ],
+    },
     {
       label: "PEMASANGAN",
       path: "/pemasangan",
       children: [
-        { label: "Petunjuk Instalasi", path: "/pemasangan?instalasi=petunjuk" },
-        { label: "Video Instalasi", path: "/pemasangan?instalasi=video" },
+        { label: "Nichiha", path: "/pemasangan?category=nichiha" },
+        { label: "LUUM", path: "/pemasangan?category=luum" },
+        
       ],
     },
     // { label: "PEMASANGAN V2", path: "/pemasanganv2" },
@@ -98,7 +109,7 @@ function NavbarHeader() {
       className="sticky top-0 left-0 w-full z-50 bg-white text-[#013774]"
     >
       <div className="content mx-auto flex justify-between items-center py-4 px-6">
-        <Link href="/nichiha">
+        <Link href="/">
           <img
             src="/headerfootelogo.png"
             alt="Inotek Karya Mandiri"

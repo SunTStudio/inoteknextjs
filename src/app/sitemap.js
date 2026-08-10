@@ -17,7 +17,6 @@ export default async function sitemap() {
     "/contactform",
     "/distributor",
     "/download",
-    "/nichiha",
     "/product",
   ];
 
@@ -48,9 +47,7 @@ export default async function sitemap() {
     if (apiBase) {
       const res = await fetch(
         `${apiBase}/api/types?pagination[pageSize]=1000`,
-        {
-          next: { revalidate: 21600 },
-        }
+        { next: { revalidate: 21600 }, }
       );
       if (res.ok) {
         const json = await res.json();

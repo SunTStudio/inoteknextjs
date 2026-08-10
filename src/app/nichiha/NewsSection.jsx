@@ -18,7 +18,7 @@ export default async function NewsSection() {
     .slice(0, 6);
 
   return (
-    <section className="bg-[#0253AE] w-full py-9 relative select-none">
+    <section id="artikel" className="bg-[#0253AE] w-full py-9 relative select-none">
       <NewsSlider>
         {newestArticles.map((item) => (
           <div
