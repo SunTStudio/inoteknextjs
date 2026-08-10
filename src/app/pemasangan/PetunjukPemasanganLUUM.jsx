@@ -43,9 +43,9 @@ export default function PetunjukPemasanganLUUM() {
         </div>
 
         {/* Deskripsi Pemasangan */}
-        <p className="text-gray-600 text-justify text-sm md:text-base leading-relaxed">
+        {/* <p className="text-gray-600 text-justify text-sm md:text-base leading-relaxed">
           [Masukkan teks deskripsi pemasangan Bathroom Ceiling Panel di sini. Contoh: Panduan instalasi dan dimensi ruang plafon minimum, finishing sambungan dengan silicone sealant untuk area basah.]
-        </p>
+        </p> */}
       </div>
 
     </div>

@@ -126,7 +126,7 @@ export default function ProfileProductLUUM() {
               className="h-12 md:h-16 object-contain"
             />
           </div>
-          <h2 className="text-[#0072BC] font-bold text-2xl md:text-3xl mb-3">
+          <h2 className="text-[#013774] font-bold text-2xl md:text-3xl mb-3">
             About LUUM
           </h2>
           <p className="text-gray-600 text-base leading-relaxed text-justify">
@@ -152,7 +152,7 @@ export default function ProfileProductLUUM() {
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                 <span className="text-gray-650 block text-lg font-semibold uppercase tracking-widest mb-1">Material of</span>
-                <span className="text-[#0072BC]">LUUM INDONESIA</span>
+                <span className="text-[#013774]">LUUM INDONESIA</span>
               </h3>
               <p className="text-gray-750 text-base leading-relaxed text-justify mb-4 font-bold">
                 SMC (Sheet Moulding Compound) merupakan Fiberglass reinforced composite material yang kemudian dibentuk melalui proses pencetakan pada suhu bertekanan tinggi.
@@ -232,7 +232,7 @@ export default function ProfileProductLUUM() {
         
         {/* Section 4: Material & Strengths */}
         <div className="w-full text-center mb-10">
-          <h2 className="text-[#0072BC] font-bold text-2xl md:text-3xl mb-8">
+          <h2 className="text-[#013774] font-bold text-2xl md:text-3xl mb-8">
             Material & Strengths
           </h2>
           
