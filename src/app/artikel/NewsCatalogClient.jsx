@@ -48,7 +48,7 @@ export default function NewsCatalogClient({ initialArticles = [] }) {
     <section className="min-h-screen content flex flex-col gap-8 w-full my-10 py-6 font-display">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div className="flex flex-col gap-2">
-          <h1 className="font-semibold text-3xl text-[#0253AE]">
+          <h1 className="font-bold text-3xl text-[#013774]">
             Artikel
           </h1>
           <p className="text-gray-500">Semua artikel terbaru dari Inotek.</p>
