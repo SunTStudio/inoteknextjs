@@ -123,6 +123,9 @@ export default function GaleriClient({ data, baseUrl, category = "nichiha" }) {
   
   return (
     <>
+      <h1 className="text-3xl font-display font-bold mb-10 text-center text-[#013774] tracking-wide">
+        Galeri Proyek {category === "nichiha" ? "NICHIHA" : "LUUM"}
+      </h1>
       <div className="flex flex-col gap-8 w-full max-w-5xl mx-auto">
         {currentData.length > 0 ? (
           currentData.map((item) => (

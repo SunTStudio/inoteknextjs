@@ -19,7 +19,7 @@ function PemasanganContent() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-display font-bold mb-10 text-center text-[#013774] uppercase tracking-wide">
+      <h1 className="text-3xl font-display font-bold mb-10 text-center text-[#013774] tracking-wide">
         Petunjuk Pemasangan {activeTab === "nichiha" ? "NICHIHA" : "LUUM"}
       </h1>
 

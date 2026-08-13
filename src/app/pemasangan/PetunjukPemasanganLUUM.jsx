@@ -8,7 +8,7 @@ export default function PetunjukPemasanganLUUM() {
       
       {/* Bagian 1: Tile Ceiling Panel */}
       <div className="flex flex-col gap-4 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+        <h2 className="text-xl md:text-2xl font-semibold text-[#013774]">
           Tile Ceiling Panel
         </h2>
         
@@ -29,7 +29,7 @@ export default function PetunjukPemasanganLUUM() {
 
       {/* Bagian 2: Bathroom Ceiling Panel */}
       <div className="flex flex-col gap-4 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+        <h2 className="text-xl md:text-2xl font-semibold text-[#013774]">
           Bathroom Ceiling Panel
         </h2>
 

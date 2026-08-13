@@ -20,7 +20,7 @@ export default function PetunjukPemasanganNICHIHA() {
 
         {/* Kolom Kanan: Teks Penjelasan Rainscreen System */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#013774] mb-2">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#013774] mb-2">
             Rainscreen System
           </h2>
 
