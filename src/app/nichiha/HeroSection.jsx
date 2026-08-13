@@ -10,15 +10,15 @@ function HeroSection() {
       <p className="text-justify text-sm flex flex-col gap-5 md:text-[16px]">
         <span>
           Kami dipercaya sebagai{" "}
-          <span className="font-bold">distributor resmi nasional Nichiha</span>,
+          <span className="font-bold">distributor resmi nasional NICHIHA</span>,
           produk{" "}
           <span className="font-bold">wall panel modern asal Jepang </span>
           yang telah terbukti unggul dalam kualitas dan inovasi. Lebih dari
-          sekadar pelindung bangunan, sistem panel fasad Nichiha merupakan karya
+          sekadar pelindung bangunan, sistem panel fasad NICHIHA merupakan karya
           arsitektur yang menghadirkan estetika serta meningkatkan nilai hunian
           dan bangunan. Dengan filosofi
           <span className="font-bold"> “Makes Living Simple”</span>, Inotek
-          bersama Nichiha menyediakan solusi fasad yang praktis, kuat, dan
+          bersama NICHIHA menyediakan solusi fasad yang praktis, kuat, dan
           indah, sehingga memudahkan arsitek, kontraktor, hingga pemilik rumah
           dalam mewujudkan fasad terbaik. Dedikasi kami sebagai distributor
           mendukung terwujudnya proyek-proyek unggulan di seluruh Indonesia,

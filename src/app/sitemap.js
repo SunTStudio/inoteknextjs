@@ -18,6 +18,7 @@ export default async function sitemap() {
     "/distributor",
     "/download",
     "/product",
+    "/artikel",
   ];
 
   const now = new Date();

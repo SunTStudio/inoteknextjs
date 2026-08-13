@@ -59,9 +59,9 @@ export default function Tabs({ initialData }) {
   return (
     <div className="w-full font-display">
       <div className="text-center my-6">
-        <h1 className="text-3xl font-bold text-[#013774]">Katalog Produk Nichiha</h1>
+        <h1 className="text-3xl font-bold text-[#013774]">Katalog Produk NICHIHA</h1>
         <p className="text-gray-600 mt-2">
-          Jelajahi berbagai varian produk berkualitas dari Nichiha.
+          Jelajahi berbagai varian produk berkualitas dari NICHIHA.
         </p>
       </div>
 

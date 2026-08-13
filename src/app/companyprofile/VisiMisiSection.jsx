@@ -2,13 +2,13 @@
 
 import React from "react";
 import { List, ListItem } from "flowbite-react";
-import { FaCircle } from "react-icons/fa";
+import { FaCircle, FaLightbulb, FaBullseye } from "react-icons/fa";
 import VisiMisiCard from "../components/VisiMisiCard";
 import { motion } from "motion/react";
 
 function VisiMisiSection() {
   const misiList = {
-    [1]: "Menyediakan produk fasad berkualitas tinggi dengan teknologi terbaik",
+    [1]: "Menyediakan produk material bangunan berkualitas tinggi dengan teknologi terbaik",
     [2]: "Mengedepankan desain modern yang sesuai tren arsitektur",
     [3]: "Memberikan layanan distribusi profesional dan responsif",
     [4]: "Menjalin kemitraan jangka panjang dengan arsitek, developer, dan kontraktor",
@@ -30,10 +30,10 @@ function VisiMisiSection() {
         <VisiMisiCard
           title="Visi"
           textAlign="text-center"
+          icon={<FaLightbulb className="w-8 h-8" />}
         >
           <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed max-w-md mx-auto py-6">
-            "Menjadi perusahaan distribusi terdepan dalam penyediaan material
-            dinding eksterior inovatif dan berestetika di Indonesia."
+            "Menjadi perusahaan distribusi terdepan dalam penyediaan material bangunan inovatif dan berestetika di Indonesia."
           </p>
         </VisiMisiCard>
       </motion.div>
@@ -45,7 +45,10 @@ function VisiMisiSection() {
         viewport={{ amount: 0.3, once: true }}
         transition={{ type: "spring", stiffness: 90, damping: 10 }}
       >
-        <VisiMisiCard title="Misi">
+        <VisiMisiCard 
+          title="Misi"
+          icon={<FaBullseye className="w-8 h-8" />}
+        >
           <List className="list-disc list-inside space-y-4">
             {Object.entries(misiList).map(([key, value]) => (
               <ListItem

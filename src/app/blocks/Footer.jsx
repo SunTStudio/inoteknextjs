@@ -153,7 +153,7 @@ function Footer() {
             <ul className="flex flex-col gap-2 text-xs text-gray-700 font-semibold">
               <li>
                 <Link href="/nichiha" className="hover:text-[#013774] transition-colors">
-                  Nichiha EX Series
+                  NICHIHA EX Series
                 </Link>
               </li>
               <li>

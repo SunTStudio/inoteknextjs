@@ -28,13 +28,7 @@ function ClosingSection() {
           Jangkauan Distribusi
         </h2>
         <p className="text-justify text-sm md:text-base">
-          <span className="font-bold">PT Inotek Karya Mandiri</span> hadir
-          sebagai distributor resmi nasional Nichiha dan LUUM, dengan jaringan distribusi
-          yang luas dan terintegrasi di seluruh Indonesia. Didukung oleh tim
-          profesional dan sistem logistik yang handal, kami memastikan setiap
-          proyek dapat memperoleh akses terhadap produk{" "}
-          <span className="font-bold">wall panel premium dari Jepang dan LUUM Premium SMC Ceiling Panel dari Korea</span>{" "}
-          dengan kualitas dan layanan terbaik.
+          <span className="font-bold">INOTEK</span> hadir sebagai distributor resmi nasional NICHIHA dan LUUM, dengan jaringan distribusi yang luas dan terintegrasi di seluruh Indonesia. Didukung oleh tim profesional dan sistem logistik yang handal, kami memastikan setiap proyek dapat memperoleh akses terhadap produk NICHIHA wall panel exterior dari Jepang dan LUUM Premium SMC Ceiling Panel dari Korea dengan kualitas dan layanan terbaik.
         </p>
       </motion.div>
     </section>

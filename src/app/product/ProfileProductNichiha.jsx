@@ -195,7 +195,7 @@ export default function ProfileProductNichiha() {
             />
           </div>
           <h2 className="text-[#013774] font-bold text-2xl md:text-3xl mb-3">
-            About Nichiha
+            About NICHIHA
           </h2>
           <p className="text-gray-600 text-base leading-relaxed text-justify">
             Brand global asal Jepang dengan pengalaman lebih dari 70 tahun dalam sistem fasad arsitektural modern. Digunakan pada berbagai proyek residensial dan komersial, dengan standar kualitas dan ketahanan tinggi.
@@ -207,10 +207,10 @@ export default function ProfileProductNichiha() {
       <div className="w-full bg-[#008B47] text-white py-10 lg:px-40 px-4 mb-12">
         <div className="w-full mx-auto">
           <h3 className="text-xl md:text-2xl font-bold mb-3">
-            What is Nichiha?
+            What is NICHIHA?
           </h3>
           <p className="text-base leading-relaxed">
-            <span className="font-bold">Nichiha EX Series</span> merupakan produk panel fasad berbahan <span className="italic">fiber cement</span> (semen yang dikombinasikan dengan partikel kayu berserat), dicetak menghasilkan tekstur permukaan khusus <span className="italic">pre-finished</span> (sudah dilapisi cat dan coating) dengan motif pilihan yang beragam.
+            <span className="font-bold">NICHIHA EX Series</span> merupakan produk panel fasad berbahan <span className="italic">fiber cement</span> (semen yang dikombinasikan dengan partikel kayu berserat), dicetak menghasilkan tekstur permukaan khusus <span className="italic">pre-finished</span> (sudah dilapisi cat dan coating) dengan motif pilihan yang beragam.
           </p>
         </div>
       </div>

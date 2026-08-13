@@ -7,16 +7,16 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://inotekkaryamandiri.com",
   ),
-  title: "Inotek Nichiha | Distributor Resmi Panel Fasad Jepang di Indonesia",
+  title: "Inotek NICHIHA | Distributor Resmi Panel Fasad Jepang di Indonesia",
   description:
-    "Inotek Karya Mandiri adalah distributor resmi Nichiha di Indonesia. Menyediakan panel fasad berkualitas dari Jepang untuk hunian dan bangunan komersial.",
+    "Inotek Karya Mandiri adalah distributor resmi NICHIHA di Indonesia. Menyediakan panel fasad berkualitas dari Jepang untuk hunian dan bangunan komersial.",
   keywords: [
-    "Nichiha",
+    "NICHIHA",
     "Panel Fasad",
     "Fasad Jepang",
     "Inotek",
     "Inotek Karya Mandiri",
-    "Distributor Nichiha",
+    "Distributor NICHIHA",
     "Fasad Bangunan",
     "Fasad Rumah",
   ],
@@ -27,11 +27,11 @@ export const metadata = {
     canonical: "https://inotekkaryamandiri.com/",
   },
   openGraph: {
-    title: "Inotek Nichiha | Distributor Resmi Panel Fasad Jepang di Indonesia",
+    title: "Inotek NICHIHA | Distributor Resmi Panel Fasad Jepang di Indonesia",
     description:
-      "Inotek Karya Mandiri adalah distributor resmi Nichiha di Indonesia. Menyediakan panel fasad berkualitas dari Jepang untuk hunian dan bangunan komersial.",
+      "Inotek Karya Mandiri adalah distributor resmi NICHIHA di Indonesia. Menyediakan panel fasad berkualitas dari Jepang untuk hunian dan bangunan komersial.",
     url: "https://inotekkaryamandiri.com/",
-    siteName: "Inotek Nichiha",
+    siteName: "Inotek NICHIHA",
     locale: "id_ID",
     type: "website",
     images: [
@@ -39,15 +39,15 @@ export const metadata = {
         url: "/headerfootelogo.png",
         width: 1200,
         height: 630,
-        alt: "Inotek Nichiha - Panel Fasad Jepang",
+        alt: "Inotek NICHIHA - Panel Fasad Jepang",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inotek Nichiha | Distributor Resmi Panel Fasad Jepang di Indonesia",
+    title: "Inotek NICHIHA | Distributor Resmi Panel Fasad Jepang di Indonesia",
     description:
-      "Panel fasad Nichiha dari Jepang, kini hadir resmi di Indonesia bersama Inotek Karya Mandiri.",
+      "Panel fasad NICHIHA dari Jepang, kini hadir resmi di Indonesia bersama Inotek Karya Mandiri.",
     images: ["/headerfootelogo.png"],
   },
   icons: {

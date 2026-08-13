@@ -62,7 +62,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = getSiteUrl();
   const canonicalSlug = article.slug || slug;
-  const canonicalPath = `/news/${canonicalSlug}`;
+  const canonicalPath = `/artikel/${canonicalSlug}`;
   const canonicalUrl = `${siteUrl}${canonicalPath}`;
 
   const seo = article.seo || {};
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }) {
       title: metaTitle,
       description: metaDescription,
       url: canonicalUrl,
-      siteName: "Inotek Nichiha",
+      siteName: "Inotek NICHIHA",
       locale: "id_ID",
       type: "article",
       publishedTime: article.publishedAt || article.createdAt,
@@ -119,13 +119,13 @@ export default async function NewsDetail({ params }) {
   const article = await getArticleBySlug(slug);
   if (!article) notFound();
 
-  // If the user hits /news/{documentId}, redirect to canonical /news/{slug}
+  // If the user hits /artikel/{documentId}, redirect to canonical /artikel/{slug}
   if (article?.slug && article.slug !== slug) {
-    redirect(`/news/${article.slug}`);
+    redirect(`/artikel/${article.slug}`);
   }
 
   const siteUrl = getSiteUrl();
-  const canonicalUrl = `${siteUrl}/news/${article.slug || slug}`;
+  const canonicalUrl = `${siteUrl}/artikel/${article.slug || slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",

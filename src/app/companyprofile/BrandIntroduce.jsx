@@ -8,10 +8,10 @@ function BrandIntroduce() {
     <section className="content font-display py-6 md:py-10">
       <div className=" w-full mb-10">
         <h3 className="text-[#00408A] font-bold text-2xl md:text-3xl lg:text-4xl mb-4">
-          Dua Brand, Satu Distributor Nasional
+          Dua Brand, Satu Pilihan
         </h3>
         <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-          Inotek Karya Mandiri memperluas peran sebagai distributor resmi nasional untuk material bangunan premium — tidak hanya menutup fasad luar dengan NICHIHA, tapi kini juga menghadirkan LUUM Premium SMC Ceiling Panel untuk menyempurnakan interior bangunan. Satu mitra pengadaan, dua standar kualitas dunia.
+          <strong>INOTEK</strong> memperluas peran sebagai distributor resmi nasional untuk material bangunan premium — tidak hanya menutup fasad luar dengan NICHIHA <i>wall panel exterior</i>, tapi kini juga menghadirkan LUUM SMC <i>Ceiling Panel</i> untuk menyempurnakan interior bangunan. Satu mitra pengadaan, dua merek kualitas dunia.
         </p>
       </div>
 
@@ -54,7 +54,7 @@ function BrandIntroduce() {
             LUUM - SMC Ceiling Panel
           </h4>
           <p className="text-sm md:text-base text-[#0072BC] leading-relaxed font-medium">
-            Panel plafon premium berbahan SMC dari Korea, waterproof dan tahan lama.
+            Panel plafon premium berbahan SMC dari Korea, <i>waterproof</i> dan tahan lama.
           </p>
         </motion.div>
       </div>

@@ -20,21 +20,21 @@ export async function POST(request) {
     if (model === "article") {
       // Revalidate daftar berita dan homepage
       revalidatePath("/");
-      revalidatePath("/news");
+      revalidatePath("/artikel");
 
       // Revalidate detail berita
       const docId = entry?.documentId || entry?.id || entry?._id;
       const slug = entry?.slug?.current || entry?.slug;
 
       if (slug) {
-        revalidatePath(`/news/${slug}`);
-        console.log(`✅ Revalidated news detail: /news/${slug}`);
+        revalidatePath(`/artikel/${slug}`);
+        console.log(`✅ Revalidated news detail: /artikel/${slug}`);
       }
 
       // Backwards-compatible: some webhooks may still only provide documentId
       if (docId) {
-        revalidatePath(`/news/${docId}`);
-        console.log(`✅ Revalidated legacy news detail: /news/${docId}`);
+        revalidatePath(`/artikel/${docId}`);
+        console.log(`✅ Revalidated legacy news detail: /artikel/${docId}`);
       }
 
       if (!slug && !docId) {

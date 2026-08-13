@@ -5,7 +5,7 @@ import BrandIntroduce from "./BrandIntroduce";
 import VisiMisiSection from "./VisiMisiSection";
 import InotekSection from "./InotekSection";
 import ProductSection from "../nichiha/ProductSection";
-import NewsSection from "../nichiha/NewsSection";
+// import NewsSection from "../nichiha/NewsSection";
 import DistributionSection from "../nichiha/DistributionSection";
 
 export default function CompanyProfile() {
@@ -17,7 +17,7 @@ export default function CompanyProfile() {
       <InotekSection />
       <BrandIntroduce />  
       <DistributionSection />
-      <NewsSection />
+      {/* <NewsSection /> */}
     </>
   );
 }

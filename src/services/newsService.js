@@ -28,7 +28,7 @@ export async function getNewsArticles() {
     category: doc.category?.category || "News",
     image: getImageUrl(doc.image, baseUrl),
     slug: doc?.slug?.current || doc?.slug || doc.documentId,
-    link: `/news/${doc?.slug?.current || doc?.slug || doc.documentId}`,
+    link: `/artikel/${doc?.slug?.current || doc?.slug || doc.documentId}`,
     createdAt: doc.createdAt,
   }));
 }

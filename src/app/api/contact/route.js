@@ -74,7 +74,7 @@ export async function POST(request) {
                         </p>
                         </div>
                         <div style="background-color: #f3f4f6; color: #666; text-align: center; padding: 12px; font-size: 12px;">
-                        © ${new Date().getFullYear()} Website Nichiha. All rights reserved.
+                        © ${new Date().getFullYear()} Website NICHIHA. All rights reserved.
                         </div>
                     </div>
                     `,

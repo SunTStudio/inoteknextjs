@@ -20,11 +20,11 @@ function PemasanganContent() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-display font-bold mb-10 text-center text-[#013774] uppercase tracking-wide">
-        Petunjuk Pemasangan
+        Petunjuk Pemasangan {activeTab === "nichiha" ? "NICHIHA" : "LUUM"}
       </h1>
 
       {/* Tab Buttons */}
-      <div className="flex border-b border-gray-200 w-full mb-10">
+      {/* <div className="flex border-b border-gray-200 w-full mb-10">
         <button
           onClick={() => setActiveTab("nichiha")}
           className={`flex-1 py-4 text-center font-bold transition-all duration-300 text-sm sm:text-base border-b-2 uppercase tracking-wider ${
@@ -33,7 +33,7 @@ function PemasanganContent() {
               : "border-transparent text-gray-500 hover:text-gray-700 bg-white hover:bg-gray-50"
           }`}
         >
-          Nichiha
+          NICHIHA
         </button>
         <button
           onClick={() => setActiveTab("luum")}
@@ -43,9 +43,9 @@ function PemasanganContent() {
               : "border-transparent text-gray-500 hover:text-gray-700 bg-white hover:bg-gray-50"
           }`}
         >
-          Luum
+          LUUM
         </button>
-      </div>
+      </div> */}
 
       {/* Tab Content */}
       <div className="w-full">

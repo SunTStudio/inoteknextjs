@@ -57,7 +57,7 @@ function CarouselSection() {
           MAKE LIVING SIMPLE
         </h3>
         <span className="text-sm md:text-xl text-start">
-          Bersama Inotek, wujudkan bangunan modern dengan fasad praktis Nichiha
+          Bersama INOTEK, wujudkan bangunan modern dengan material berkualitas
         </span>
       </div>
     </section>

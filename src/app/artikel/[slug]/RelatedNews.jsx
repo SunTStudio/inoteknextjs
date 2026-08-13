@@ -8,15 +8,15 @@ export default async function RelatedNews({ currentCategory, currentSlug }) {
   const filtered = articles.filter(
     (article) =>
       article.category === currentCategory &&
-      article.link !== `/news/${currentSlug}`,
+      article.link !== `/artikel/${currentSlug}`,
   );
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-2xl font-bold">Berita Lainnya</h2>
+      <h2 className="text-2xl font-bold">Artikel Lainnya</h2>
       <div className="flex flex-col gap-3">
         {filtered.length === 0 && (
-          <p className="text-sm text-gray-400">Tidak ada berita terkait</p>
+          <p className="text-sm text-gray-400">Tidak ada artikel terkait</p>
         )}
         {filtered.slice(0, 5).map((article) => (
           <Link

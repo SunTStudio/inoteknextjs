@@ -38,7 +38,6 @@ function NavbarHeader() {
   }, [isOpen]);
 
   const menus = [
-    // { label: "BERANDA", path: "/nichiha" },
     {
       label: "PROFIL",
       path: "/companyprofile",
@@ -48,45 +47,31 @@ function NavbarHeader() {
           path: "/companyprofile#tentang-kami",
         },
         { label: "Visi & Misi", path: "/companyprofile#visimisi" },
-        // { label: "Budaya", path: "/companyprofile#budaya" },
-        // jangkauan distribusi
-        { label: "Jangkauan Distribusi", path: "/companyprofile#jangkauan-distribusi" },
-        // artikel
-        { label: "Artikel", path: "/companyprofile#artikel" },
-
+        { label: "Distribusi", path: "/companyprofile#jangkauan-distribusi" },
       ],
     },
     {
-      label: "PRODUK",
-      path: "/product",
+      label: "NICHIHA",
+      path: "/nichiha",
       children: [
-        { label: "Nichiha", path: "/nichiha" },
-        { label: "LUUM", path: "/luum" },
-        // { label: "E-Catalog", path: "/download" },
-      ],
-    },
-    // { label: "ARTIKEL", path: "/news" },
-    // { label: "DISTRIBUTOR", path: "/distributor" },
-    {
-      label: "GALERI FOTO",
-      path: "/galeri",
-      children: [
-        { label: "Nichiha", path: "/galeri?category=nichiha" },
-        { label: "LUUM", path: "/galeri?category=luum" },
-        // { label: "Nichiha v2", path: "/galeriv2?category=nichiha" },
-        // { label: "LUUM v2", path: "/galeriv2?category=luum" },
+        { label: "Produk", path: "/nichiha" },
+        { label: "Galeri Proyek", path: "/galeri?category=nichiha" },
+        { label: "Pemasangan", path: "/pemasangan?category=nichiha" },
       ],
     },
     {
-      label: "PEMASANGAN",
-      path: "/pemasangan",
+      label: "LUUM",
+      path: "/luum",
       children: [
-        { label: "Nichiha", path: "/pemasangan?category=nichiha" },
-        { label: "LUUM", path: "/pemasangan?category=luum" },
-        
+        { label: "Produk", path: "/luum" },
+        { label: "Galeri Proyek", path: "/galeri?category=luum" },
+        { label: "Pemasangan", path: "/pemasangan?category=luum" },
       ],
     },
-    // { label: "PEMASANGAN V2", path: "/pemasanganv2" },
+    {
+      label: "ARTIKEL",
+      path: "/artikel",
+    },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);

@@ -49,7 +49,7 @@ export default function NewsCatalogClient({ initialArticles = [] }) {
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold text-3xl text-[#0253AE]">
-            News Catalogue
+            Artikel
           </h1>
           <p className="text-gray-500">Semua artikel terbaru dari Inotek.</p>
         </div>
