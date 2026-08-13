@@ -5,7 +5,7 @@ import BrandIntroduce from "./companyprofile/BrandIntroduce";
 import VisiMisiSection from "./companyprofile/VisiMisiSection";
 import InotekSection from "./companyprofile/InotekSection";
 import DistributionSection from "./nichiha/DistributionSection";
-import NewsSection from "./nichiha/NewsSection";
+// import NewsSection from "./nichiha/NewsSection";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <InotekSection />
       <BrandIntroduce />  
       <DistributionSection />
-      <NewsSection />
+      {/* <NewsSection /> */}
     </>
   );
 }
