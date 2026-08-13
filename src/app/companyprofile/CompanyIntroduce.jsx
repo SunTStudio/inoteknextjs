@@ -20,10 +20,14 @@ function CompanyIntroduce() {
       <div className="space-y-4 text-justify text-sm md:text-base">
         <h3 className="text-[#00408A] font-bold text-2xl md:text-3xl lg:text-4xl mb-4">INOTEK : MAKES LIVING SIMPLE</h3>
         <p><strong>PT Inotek Karya Mandiri (INOTEK)</strong> adalah<strong> distributor resmi nasional</strong> untuk material bangunan yang premium. Kami dipercaya sebagai distributor resmi nasional <strong>NICHIHA <i>Exterior Wall Panel</i></strong> dari Jepang dan <strong>LUUM <i>Premium SMC Ceiling Panel</i></strong> dari Korea.
-Kami percaya bahwa setiap elemen bangunan—baik pada fasad maupun ruang interior—tidak hanya berfungsi sebagai pelindung, tetapi juga merepresentasikan karakter dan gaya hidup penggunanya. Karena itu, kami menghadirkan produk berkualitas tinggi yang memadukan inovasi, estetika, ketahanan, dan kemudahan pemasangan.
- <strong>NICHIHA <i>Exterior Wall Panel</i></strong> menawarkan sistem panel fasad berteknologi tinggi dari Jepang, dikenal akan desain autentik, ketahanan terhadap cuaca, perawatan minimal, dan kualitas <i>finishing</i> yang konsisten. Sementara itu, <strong>LUUM SMC <i>Ceiling Panel</i></strong>  menghadirkan solusi plafon modern berbahan SMC (<i>Sheet Molding Compound</i>) yang mengutamakan kualitas, daya tahan, dan estetika untuk berbagai jeanis bangunan.
+Kami percaya bahwa setiap elemen bangunan—baik pada fasad maupun ruang interior—tidak hanya berfungsi sebagai pelindung, tetapi juga merepresentasikan karakter dan gaya hidup penggunanya. Karena itu, kami menghadirkan produk berkualitas tinggi yang memadukan inovasi, estetika, ketahanan, dan kemudahan pemasangan. </p>
+ <p className="mb-4">
+<strong> NICHIHA <i>Exterior Wall Panel</i></strong> menawarkan sistem panel fasad berteknologi tinggi dari Jepang, dikenal akan desain autentik, ketahanan terhadap cuaca, perawatan minimal, dan kualitas <i>finishing</i> yang konsisten. Sementara itu, <strong>LUUM SMC <i>Ceiling Panel</i></strong>  menghadirkan solusi plafon modern berbahan SMC (<i>Sheet Molding Compound</i>) yang mengutamakan kualitas, daya tahan, dan estetika untuk berbagai jeanis bangunan.
+ </p>
+
+ <p className="mb-4">
 Didukung jaringan distribusi nasional, tim profesional, serta layanan konsultasi produk dan teknis, INOTEK berkomitmen menjadi mitra terpercaya bagi arsitek, desainer interior, kontraktor, <i>developer</i>, dan pemilik bangunan dalam mewujudkan proyek yang berkualitas, inovatif, dan berkelanjutan.
-      </p>
+</p>
       </div>
       {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[30vh]">
         <motion.div
