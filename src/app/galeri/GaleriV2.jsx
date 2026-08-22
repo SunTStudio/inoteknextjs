@@ -35,7 +35,10 @@ function ImageSlider({ images, baseUrl, title, description }) {
     >
       {images.map((img, idx) => {
         const displayTitle = title || img.caption || "";
-        const displayDesc = description || (title ? img.caption : "");
+        let displayDesc = description || (title ? img.caption : "");
+        if (displayTitle === displayDesc) {
+          displayDesc = "";
+        }
 
         return (
           <div
@@ -303,7 +306,7 @@ export default function GaleriV2({ category }) {
                             {selectedProject.nama_project || filteredImages[0].caption}
                           </h4>
                         )}
-                        {selectedProject.description && (
+                        {selectedProject.description && selectedProject.description !== (selectedProject.nama_project || filteredImages[0].caption) && (
                           <p className="text-xs md:text-sm text-gray-200 leading-normal max-w-3xl">
                             {selectedProject.description}
                           </p>
@@ -326,7 +329,7 @@ export default function GaleriV2({ category }) {
                           {selectedProject.nama_project || selectedProject.thumbnail.caption}
                         </h4>
                       )}
-                      {selectedProject.description && (
+                      {selectedProject.description && selectedProject.description !== (selectedProject.nama_project || selectedProject.thumbnail.caption) && (
                         <p className="text-xs md:text-sm text-gray-200 leading-normal max-w-3xl">
                           {selectedProject.description}
                         </p>
