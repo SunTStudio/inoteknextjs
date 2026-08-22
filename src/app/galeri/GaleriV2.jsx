@@ -115,19 +115,7 @@ export default function GaleriV2({ category }) {
         if (res.ok) {
           const json = await res.json();
           const items = json.data || [];
-          let duplicatedItems = [];
-          if (items.length > 0) {
-            // Duplicate the items 6 times so there are enough images to show the bento pattern beautifully
-            for (let i = 0; i < 6; i++) {
-              duplicatedItems.push(
-                ...items.map((item, idx) => ({
-                  ...item,
-                  id: `${item.id}-dup-${i}-${idx}`,
-                }))
-              );
-            }
-          }
-          setData(duplicatedItems);
+          setData(items);
         }
       } catch (err) {
         console.error("Error fetching galeri v2 data:", err);
