@@ -110,7 +110,7 @@ export default function GaleriV2({ category }) {
       setLoading(true);
       try {
         const res = await fetch(
-          `${baseUrl}/api/galeris?filters[kategori][$eq]=${category}&populate=*&sort=createdAt:desc&pagination[limit]=100`
+          `${baseUrl}/api/galeris?filters[kategori][$eq]=${category}&populate=*&sort=nama_project:asc&pagination[limit]=100`
         );
         if (res.ok) {
           const json = await res.json();
