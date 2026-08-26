@@ -168,7 +168,7 @@ export default function GaleriV2({ category }) {
     return (
       <div className="w-full text-center py-12 flex flex-col items-center justify-center gap-3">
         <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#013774]"></div>
-        <p className="text-gray-500 font-display">Memuat galeri v2...</p>
+        <p className="text-gray-500 font-display">Memuat Galeri...</p>
       </div>
     );
   }
@@ -183,6 +183,9 @@ export default function GaleriV2({ category }) {
 
   return (
     <div className="w-full px-2 sm:px-6 py-4">
+      <h1 className="text-3xl font-display font-bold mb-10 text-center text-[#013774] tracking-wide">
+        Galeri Proyek {category === "nichiha" ? "NICHIHA" : category === "luum" ? "LUUM" : category?.toUpperCase()}
+      </h1>
       {/* Bento/Mosaic Repeating Grid Pattern */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto auto-rows-[300px]">
         {data.map((item, index) => {
