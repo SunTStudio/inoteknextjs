@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function ProfileProductNichiha() {
   const slides = [
@@ -36,10 +37,78 @@ export default function ProfileProductNichiha() {
     },
   ];
 
-  const scrollRef = React.useRef(null);
+  const scrollRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDown, setIsDown] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+
+  const goToSlide = useCallback((index) => {
+    const container = scrollRef.current;
+    if (container) {
+      const containerWidth = container.clientWidth;
+      container.style.scrollBehavior = "smooth";
+      container.scrollTo({
+        left: index * containerWidth,
+        behavior: "smooth",
+      });
+      setCurrentIndex(index);
+    }
+  }, []);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => {
+      const nextIdx = (prev + 1) % slides.length;
+      const container = scrollRef.current;
+      if (container) {
+        const containerWidth = container.clientWidth;
+        container.style.scrollBehavior = "smooth";
+        container.scrollTo({
+          left: nextIdx * containerWidth,
+          behavior: "smooth",
+        });
+      }
+      return nextIdx;
+    });
+  }, [slides.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => {
+      const prevIdx = (prev - 1 + slides.length) % slides.length;
+      const container = scrollRef.current;
+      if (container) {
+        const containerWidth = container.clientWidth;
+        container.style.scrollBehavior = "smooth";
+        container.scrollTo({
+          left: prevIdx * containerWidth,
+          behavior: "smooth",
+        });
+      }
+      return prevIdx;
+    });
+  }, [slides.length]);
+
+  // Auto slide interval (4 detik), dijeda saat hover/drag
+  useEffect(() => {
+    if (isDown || isHovered) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isDown, isHovered, nextSlide]);
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (container && container.clientWidth > 0 && !isDown) {
+      const idx = Math.round(container.scrollLeft / container.clientWidth);
+      if (idx >= 0 && idx < slides.length && idx !== currentIndex) {
+        setCurrentIndex(idx);
+      }
+    }
+  };
 
   const handleMouseDown = (e) => {
     setIsDown(true);
@@ -53,6 +122,7 @@ export default function ProfileProductNichiha() {
   };
 
   const handleMouseLeave = () => {
+    setIsHovered(false);
     if (!isDown) return;
     setIsDown(false);
 
@@ -66,6 +136,7 @@ export default function ProfileProductNichiha() {
         left: targetIndex * containerWidth,
         behavior: "smooth",
       });
+      setCurrentIndex(targetIndex);
 
       setTimeout(() => {
         if (container) {
@@ -98,6 +169,7 @@ export default function ProfileProductNichiha() {
         left: targetIndex * containerWidth,
         behavior: "smooth",
       });
+      setCurrentIndex(targetIndex);
 
       setTimeout(() => {
         if (container) {
@@ -121,13 +193,20 @@ export default function ProfileProductNichiha() {
     <div className="w-full bg-white text-gray-800 font-display">
       
       {/* Section 1: USP Carousel (Full Width) */}
-      <div className="relative w-full mb-12">
+      <div
+        className="relative w-full mb-12 group overflow-hidden"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <div
           ref={scrollRef}
+          onScroll={handleScroll}
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
           className="flex overflow-x-auto snap-x snap-mandatory h-[320px] sm:h-[350px] md:h-[400px] w-full cursor-grab active:cursor-grabbing scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           {slides.map((slide, index) => (
@@ -180,6 +259,41 @@ export default function ProfileProductNichiha() {
             </div>
           ))}
         </div>
+
+        {/* Prev / Next Buttons */}
+        <button
+          type="button"
+          onClick={prevSlide}
+          className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2.5 rounded-full shadow-lg backdrop-blur-xs transition-all opacity-0 group-hover:opacity-100 z-10 cursor-pointer items-center justify-center hover:scale-105 active:scale-95"
+          aria-label="Previous Slide"
+        >
+          <FaChevronLeft className="w-3.5 h-3.5" />
+        </button>
+        <button
+          type="button"
+          onClick={nextSlide}
+          className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2.5 rounded-full shadow-lg backdrop-blur-xs transition-all opacity-0 group-hover:opacity-100 z-10 cursor-pointer items-center justify-center hover:scale-105 active:scale-95"
+          aria-label="Next Slide"
+        >
+          <FaChevronRight className="w-3.5 h-3.5" />
+        </button>
+
+        {/* Dot Indicators (Dihide sementara) */}
+        {/* 
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10 bg-black/25 backdrop-blur-xs px-3 py-1.5 rounded-full">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => goToSlide(idx)}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                currentIndex === idx ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
+              }`}
+              aria-label={`Slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+        */}
       </div>
 
       {/* Main Content Wrapper Part 1 (Logo & About) */}

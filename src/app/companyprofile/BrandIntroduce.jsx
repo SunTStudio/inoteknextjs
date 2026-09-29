@@ -17,6 +17,8 @@ function BrandIntroduce() {
 
       <div className="grid grid-cols-2 gap-4 md:gap-8 w-full">
         {/* Card 1: NICHIHA */}
+        <a href="/nichiha">
+
         <motion.div
           className="bg-[#EAEAEA] border-[6px] border-[#008B47] rounded-[2rem] p-6 md:p-8 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow"
           whileHover={{ y: -5 }}
@@ -36,8 +38,10 @@ function BrandIntroduce() {
             Panel dinding berbahan fiber semen dari Jepang, kuat dan mudah dirawat untuk bangunan premium.
           </p>
         </motion.div>
+        </a>
 
         {/* Card 2: LUUM */}
+        <a href="/luum">
         <motion.div
           className="bg-[#EAEAEA] border-[6px] border-[#0072BC] rounded-[2rem] p-6 md:p-8 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow"
           whileHover={{ y: -5 }}
@@ -57,6 +61,7 @@ function BrandIntroduce() {
             Panel plafon premium berbahan SMC dari Korea, <i>waterproof</i> dan tahan lama.
           </p>
         </motion.div>
+        </a>
       </div>
     </section>
   );

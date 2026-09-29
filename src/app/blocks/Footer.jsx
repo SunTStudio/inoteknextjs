@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { FaInstagram, FaFacebookF, FaGlobe } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -114,32 +115,44 @@ function Footer() {
             <h3 className="text-sm font-bold text-[#013774] uppercase tracking-wider">
               Sosial Media
             </h3>
-            <ul className="flex flex-col gap-2 text-xs text-gray-700 font-semibold">
+            <ul className="flex flex-col gap-3 text-xs text-gray-700 font-semibold">
               <li>
                 <Link
-                  href="https://www.instagram.com/inotek_nichiha/"
-                  className="hover:text-[#013774] transition-colors"
+                  href="https://www.instagram.com/inotek_karyamandiri/"
+                  className="flex items-center gap-2.5 hover:text-[#013774] transition-colors group"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Inotek_nichiha
+                  <div className="bg-[#013774] p-1.5 rounded flex items-center justify-center shrink-0 w-7 h-7 text-white group-hover:bg-[#024a9c] transition-colors">
+                    <FaInstagram className="w-4 h-4" />
+                  </div>
+                  <span>inotek_karyamandiri</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="https://www.facebook.com/profile.php?id=61582034552515"
-                  className="hover:text-[#013774] transition-colors"
+                  className="flex items-center gap-2.5 hover:text-[#013774] transition-colors group"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  PT Inotek Karya Mandiri
+                  <div className="bg-[#013774] p-1.5 rounded flex items-center justify-center shrink-0 w-7 h-7 text-white group-hover:bg-[#024a9c] transition-colors">
+                    <FaFacebookF className="w-3.5 h-3.5" />
+                  </div>
+                  <span>PT Inotek Karya Mandiri</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="https://www.inotekkaryamandiri.com"
-                  className="hover:text-[#013774] transition-colors"
+                  className="flex items-center gap-2.5 hover:text-[#013774] transition-colors group"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  www.inotekkaryamandiri.com
+                  <div className="bg-[#013774] p-1.5 rounded flex items-center justify-center shrink-0 w-7 h-7 text-white group-hover:bg-[#024a9c] transition-colors">
+                    <FaGlobe className="w-4 h-4" />
+                  </div>
+                  <span className="break-all">www.inotekkaryamandiri.com</span>
                 </Link>
               </li>
             </ul>

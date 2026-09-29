@@ -121,7 +121,7 @@ export default function GaleriV2({ category }) {
           setData(items);
         }
       } catch (err) {
-        console.error("Error fetching galeri v2 data:", err);
+        console.error("Error fetching galeri data:", err);
       } finally {
         setLoading(false);
       }
